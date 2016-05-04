@@ -472,5 +472,8 @@
     <string-array name="config_disabledUntilUsedPreinstalledCarrierApps">
         <item>com.google.android.apps.tycho</item>
     </string-array>
+    <!-- Whether device supports lockscreen rotation -->
+    <bool name="config_enableLockScreenRotation">true</bool>
+
 
 </resources>

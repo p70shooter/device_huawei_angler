@@ -153,13 +153,6 @@ BOARD_VENDOR_QCOM_LOC_PDK_FEATURE_SET := true
 #NFC
 NXP_CHIP_TYPE := 2
 
-# Testing related defines
-BOARD_PERFSETUP_SCRIPT := platform_testing/scripts/perf-setup/angler-setup.sh
-
-# Use Snapdragon LLVM for testing purposes, if available
-ifeq ($(AICP_BUILDTYPE), EXPERIMENTAL)
-TARGET_USE_SDCLANG := true
-else
 USE_CLANG_PLATFORM_BUILD := true
 endif
 

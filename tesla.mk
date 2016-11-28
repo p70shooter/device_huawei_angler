@@ -17,17 +17,17 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 $(call inherit-product, device/huawei/angler/aosp_angler.mk)
 
-# Inherit some common Tipsy stuff.
-$(call inherit-product, vendor/tipsy/config/common.mk)
-$(call inherit-product, vendor/tipsy/config/common_full_phone.mk)
+# Inherit some common Tesla stuff.
+$(call inherit-product, vendor/tesla/config/common.mk)
+$(call inherit-product, vendor/tesla/config/common_full_phone.mk)
 
 # Enhanced NFC
-$(call inherit-product, vendor/tipsy/config/nfc_enhanced.mk)
+$(call inherit-product, vendor/tesla/config/nfc_enhanced.mk)
 
 DEVICE_PACKAGE_OVERLAYS += device/huawei/angler/overlay-cm
 
 ## Device identifier. This must come after all inclusions
-PRODUCT_NAME := tipsy_angler
+PRODUCT_NAME := tesla_angler
 PRODUCT_DEVICE := angler
 PRODUCT_BRAND := google
 PRODUCT_MODEL := Nexus 6P

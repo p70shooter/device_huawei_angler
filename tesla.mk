@@ -36,8 +36,8 @@ PRODUCT_MANUFACTURER := Huawei
 # Device Fingerprint
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME=angler \
-    BUILD_FINGERPRINT=google/angler/angler:7.0/NBD91K/3318877:user/release-keys \
-    PRIVATE_BUILD_DESC="angler-user 7.0 NBD91K 3318877 release-keys"
+    PRIVATE_BUILD_DESC="angler-user 7.1.1 NPF10C 3347772 release-keys" \
+    BUILD_FINGERPRINT="google/angler/angler:7.1.1/NPF10C/3347772:user/release-keys"
 
 # Boot animation
 TARGET_SCREEN_HEIGHT := 2560

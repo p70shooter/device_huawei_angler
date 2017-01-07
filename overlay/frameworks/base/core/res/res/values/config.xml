@@ -411,6 +411,8 @@
         <item>"/system/framework/oat/arm64/services.odex"</item>
         <item>"/system/framework/arm64/boot.oat"</item>
         <item>"/system/framework/arm64/boot-core-libart.oat"</item>
+        <item>"/data/dalvik-cache/arm64/system@framework@boot.oat"</item>
+        <item>"/data/dalvik-cache/arm64/system@framework@services.jar@classes.dex"</item>
     </string-array>
 
     <!-- Whether device supports double tap to wake -->
@@ -440,6 +442,21 @@
             64 - Volume rocker
          For example, a device with Home, Back and Menu keys would set this
          config to 7. -->
+
+    <!-- Whether WiFi display is supported by this device.
+         There are many prerequisites for this feature to work correctly.
+         Here are a few of them:
+         * The WiFi radio must support WiFi P2P.
+         * The WiFi radio must support concurrent connections to the WiFi display and
+           to an access point.
+         * The Audio Flinger audio_policy.conf file must specify a rule for the "r_submix"
+           remote submix module.  This module is used to record and stream system
+           audio output to the WiFi display encoder in the media server.
+         * The remote submix module "audio.r_submix.default" must be installed on the device.
+         * The device must be provisioned with HDCP keys (for protected content).
+    -->
+    <bool name="config_enableWifiDisplay">true</bool>
+
     <!-- Hide Project Fi app unless it is being used -->
     <string-array name="config_disabledUntilUsedPreinstalledCarrierApps">
         <item>com.google.android.apps.tycho</item>
